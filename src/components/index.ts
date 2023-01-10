@@ -1,3 +1,3 @@
 import Watch from "./Watch/Watch";
-
-export {Watch}
+import TableTimer from "./TableTimer/TableTimer";
+export {Watch,TableTimer}

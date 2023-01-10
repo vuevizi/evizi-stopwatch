@@ -12,6 +12,7 @@ export const Watch = styled.div`
   color: var(--text-color);
   font-size: 40px;
   & .watch__milliseconds-container {
+    padding-inline: 2px;
     & #milliseconds {
       font-size: 60px;
       font-weight: bold;
