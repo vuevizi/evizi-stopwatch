@@ -15,3 +15,6 @@ export interface RecordState {
     amountOfRecords: number;
     timeRecords: Record[];
 }
+export interface ButtonWatchProps {
+    areRunning?: boolean;
+}

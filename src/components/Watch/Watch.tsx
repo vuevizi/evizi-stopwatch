@@ -4,7 +4,7 @@ import {Record, TimeState} from "../../interfaces/interfaces";
 import {useAppDispatch} from "../../redux/hooks";
 import {addRecord, deleteAllRecord} from "../../features/RecordTime/RecordTime.slice";
 
-let timer:any;
+let timer: any;
 const Watch: React.FC = () => {
     const dispatch = useAppDispatch();
     const [time, setTime] = useState<TimeState>({
@@ -15,7 +15,7 @@ const Watch: React.FC = () => {
         milliseconds: 0,
     })
 
-    const startWatch = ():void => {
+    const startWatch = (): void => {
         if (!time.areRunning) {
             setTime(prevState => {
                 return {
@@ -23,11 +23,11 @@ const Watch: React.FC = () => {
                     areRunning: true,
                 }
             })
-            timer = setInterval(()=>pace(),10);
+            timer = setInterval(() => pace(), 10);
         }
 
     }
-    const stopWatch = ():void => {
+    const stopWatch = (): void => {
         if (time.areRunning) {
             clearInterval(timer);
             setTime(prevState => {
@@ -41,7 +41,7 @@ const Watch: React.FC = () => {
         }
     };
 
-    const handleResetWatch = ():void => {
+    const handleResetWatch = (): void => {
         clearInterval(timer);
         setTime(prevState => {
             return {
@@ -56,7 +56,7 @@ const Watch: React.FC = () => {
         dispatch(deleteAllRecord());
     };
 
-    const pace = ():void => {
+    const pace = (): void => {
         setTime(prevState => {
             return {
                 ...prevState,
@@ -65,28 +65,29 @@ const Watch: React.FC = () => {
         })
     };
 
-    const formatTimeMilliseconds = (value:number):string => {
+    const formatTimeMilliseconds = (value: number): string => {
         let cloneValue = value.toString();
-        if(cloneValue.length < 1){
+        if (cloneValue.length < 1) {
             return cloneValue
         }
-        if(cloneValue.length < 2){
+        if (cloneValue.length < 2) {
             cloneValue = "00" + cloneValue;
-        }if(cloneValue.length < 3){
+        }
+        if (cloneValue.length < 3) {
             cloneValue = "0" + cloneValue;
         }
-        return cloneValue.slice(-3,-1);
+        return cloneValue.slice(-3, -1);
     };
 
-    const formatTime = (value:number):string => {
+    const formatTime = (value: number): string => {
         let cloneValue = value.toString();
-        if(cloneValue.length < 2){
+        if (cloneValue.length < 2) {
             cloneValue = "0" + cloneValue;
         }
         return cloneValue;
     }
-    const handleAddRecord = ():void => {
-        const dataRecordToRedux:Record = {
+    const handleAddRecord = (): void => {
+        const dataRecordToRedux: Record = {
             minutes: formatTime(time.minutes),
             seconds: formatTime(time.seconds),
             milliseconds: formatTimeMilliseconds(time.milliseconds)
@@ -94,8 +95,8 @@ const Watch: React.FC = () => {
         dispatch(addRecord(dataRecordToRedux))
     }
     //UseEffect
-    useEffect(()=>{
-        if(time.milliseconds>=1000){
+    useEffect(() => {
+        if (time.milliseconds >= 1000) {
             setTime(prevState => {
                 return {
                     ...prevState,
@@ -103,7 +104,8 @@ const Watch: React.FC = () => {
                     milliseconds: 0
                 }
             })
-        } if(time.seconds>=59){
+        }
+        if (time.seconds >= 59) {
             setTime(prevState => {
                 return {
                     ...prevState,
@@ -112,7 +114,8 @@ const Watch: React.FC = () => {
                     milliseconds: 0
                 }
             })
-        }if(time.seconds>=59){
+        }
+        if (time.seconds >= 59) {
             setTime(prevState => {
                 return {
                     ...prevState,
@@ -123,8 +126,7 @@ const Watch: React.FC = () => {
                 }
             })
         }
-    },[time.milliseconds])
-
+    }, [time.milliseconds])
 
 
     return (
@@ -143,10 +145,15 @@ const Watch: React.FC = () => {
                 </div>
             </S.Watch>
             <S.WatchActionContainer>
-                <S.WatchButton onClick={()=>startWatch()}>Start</S.WatchButton>
-                <S.WatchButton onClick={()=>handleAddRecord()}>Mark</S.WatchButton>
-                <S.WatchButton onClick={()=>stopWatch()}>Stop</S.WatchButton>
-                <S.WatchButton onClick={()=>handleResetWatch()}>Reset</S.WatchButton>
+                {time.areRunning ?
+                    <S.WatchButtonStop areRunning={time.areRunning}
+                                        onClick={() => stopWatch()}>Stop</S.WatchButtonStop> :
+                    <S.WatchButtonStart areRunning={time.areRunning}
+                                       onClick={() => startWatch()}>Start</S.WatchButtonStart>}
+                {time.areRunning ? <S.WatchButtonMark onClick={() => handleAddRecord()}>Mark</S.WatchButtonMark> :
+                    <S.WatchButtonReset onClick={() => handleResetWatch()}>Reset</S.WatchButtonReset>}
+
+
             </S.WatchActionContainer>
         </S.WatchContainer>
 

@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+import {ButtonWatchProps} from "../../interfaces/interfaces";
+
 export const WatchContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,14 +37,15 @@ export const WatchActionContainer = styled.div`
   align-items: center;
   
 `
-export const WatchButton = styled.button`
+export const WatchButtonStart = styled.button<ButtonWatchProps>`
   font-size: 24px;
-  color: var(--text-color);
-  background: var(--notify-color);
+  color: white;
+  background-color: green;
   border-radius: 20px;
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  
   &:hover {
     transform: translate(-2px,-2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
@@ -51,4 +54,60 @@ export const WatchButton = styled.button`
     transform: translate(0,0);
     box-shadow: 0px 0px 0px 0px;
   }
+`
+export const WatchButtonStop = styled.button<ButtonWatchProps>`
+  font-size: 24px;
+  color: white;
+  background-color: red;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translate(-2px,-2px);
+    box-shadow: 7px 7px 12px 0px var(--text-color);
+  }
+  &:active {
+    transform: translate(0,0);
+    box-shadow: 0px 0px 0px 0px;
+  }
+`
+export const WatchButtonReset = styled.button<ButtonWatchProps>`
+  font-size: 24px;
+  color: white;
+  background: grey;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translate(-2px,-2px);
+    box-shadow: 7px 7px 12px 0px var(--text-color);
+  }
+  &:active {
+    transform: translate(0,0);
+    box-shadow: 0px 0px 0px 0px;
+  }
+`
+export const WatchButtonMark = styled.button<ButtonWatchProps>`
+  font-size: 24px;
+  color: var(--text-color);
+  background: var(--primary-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  
+  &:hover {
+    transform: translate(-2px,-2px);
+    box-shadow: 7px 7px 12px 0px var(--text-color);
+  }
+  &:active {
+    transform: translate(0,0);
+    box-shadow: 0px 0px 0px 0px;
+  }
+  
 `
