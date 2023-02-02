@@ -29,6 +29,7 @@ const Watch: React.FC = () => {
       timer = setInterval(() => pace(), 10);
     }
   };
+
   const stopWatch = (): void => {
     if (time.areRunning) {
       clearInterval(timer);

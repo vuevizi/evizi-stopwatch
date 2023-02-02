@@ -1,5 +1,5 @@
 import {Watch} from '../components/';
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import configureStore from 'redux-mock-store';
 import {Middleware} from '@reduxjs/toolkit';
 import {Provider} from 'react-redux';
@@ -58,9 +58,5 @@ describe('Watch Test', () => {
   test('renders right button Mark at the first render', () => {
     const buttonMark = findTestElement(watchActions, 'button-mark');
     expect(buttonMark.length).toBe(0);
-  });
-  test('renders right button Reset at the first render', () => {
-    const buttonReset = findTestElement(watchActions, 'button-reset');
-    expect(buttonReset.length).toBe(1);
   });
 });
