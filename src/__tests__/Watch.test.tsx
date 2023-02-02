@@ -25,10 +25,13 @@ describe('Watch Test', () => {
         <Watch />
       </Provider>
     );
+    console.log(component.debug());
     watch = findTestElement(component, 'watch');
     watchContainer = findTestElement(component, 'watch-container');
     watchActions = findTestElement(component, 'watch-actions');
+    const mockfn = jest.fn();
   });
+
   test('renders without crash', () => {
     expect(component.length).toBe(1);
   });
@@ -47,20 +50,31 @@ describe('Watch Test', () => {
     expect(millisecondsText.text()).toEqual('00');
   });
   test('renders right button Start at the first render', () => {
-    const buttonStart = findTestElement(watchActions, 'button-start');
+    const buttonStart = watchActions.find('.sc-hLBbgP');
     expect(buttonStart.length).toBe(1);
-    console.log(buttonStart.instance());
+    expect(buttonStart.simulate('click').length).toBeGreaterThan(0);
   });
+  // test('renders Stop Button when click to Start', () => {
+  //   const buttonStart = watchActions.find('.sc-hLBbgP');
+  //   const buttonStop = watchActions.find('.sc-eDvSVe');
+  //   buttonStart.simulate('click');
+  //   component.update();
+  //   buttonStart.update();
+  //   buttonStop.update();
+  //   expect(buttonStart.length).toBe(0);
+  //   expect(buttonStop.length).toBe(1);
+  // });
   test('renders right button Stop at the first render', () => {
-    const buttonStop = findTestElement(watchActions, 'button-stop');
+    const buttonStop = watchActions.find('.sc-eDvSVe');
     expect(buttonStop.length).toBe(0);
   });
   test('renders right button Mark at the first render', () => {
-    const buttonMark = findTestElement(watchActions, 'button-mark');
+    const buttonMark = watchActions.find('.sc-gKPRtg');
     expect(buttonMark.length).toBe(0);
   });
   test('renders right button Reset at the first render', () => {
-    const buttonReset = findTestElement(watchActions, 'button-reset');
+    const buttonReset = watchActions.find('.sc-jSUZER');
     expect(buttonReset.length).toBe(1);
+    expect(buttonReset.simulate('click').length).toBeGreaterThan(0);
   });
 });

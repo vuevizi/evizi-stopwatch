@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders without crash 1`] = `
+<styled.header
+  data-test="header-container"
+>
+  <styled.h1
+    data-test="header-logo"
+  >
+    Stop Watch
+  </styled.h1>
+</styled.header>
+`;

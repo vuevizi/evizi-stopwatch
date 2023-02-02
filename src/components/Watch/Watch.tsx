@@ -171,6 +171,7 @@ const Watch: React.FC = () => {
           </S.WatchButtonStop>
         ) : (
           <S.WatchButtonStart
+            className="button-start"
             data-test="button-start"
             onClick={startWatch}
           >

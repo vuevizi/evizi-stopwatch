@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer render with out crash 1`] = `
+<styled.footer
+  data-test="footer-container"
+>
+  <styled.h2
+    data-test="footer-text"
+  >
+    Designed by Vu
+  </styled.h2>
+</styled.footer>
+`;
