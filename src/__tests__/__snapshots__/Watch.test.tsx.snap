@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Watch renders matching with snapshot 1`] = `
+exports[`Watch Test renders matching with snapshot 1`] = `
 <Provider
   store={
     Object {
@@ -70,7 +70,6 @@ exports[`Watch renders matching with snapshot 1`] = `
             data-test="watch-actions"
           >
             <styled.button
-              areRunning={false}
               data-test="button-start"
               onClick={[Function]}
             >
@@ -83,12 +82,12 @@ exports[`Watch renders matching with snapshot 1`] = `
               </button>
             </styled.button>
             <styled.button
-              data-set="button-reset"
+              data-test="button-reset"
               onClick={[Function]}
             >
               <button
                 className="sc-jSUZER gLsqKa"
-                data-set="button-reset"
+                data-test="button-reset"
                 onClick={[Function]}
               >
                 Reset

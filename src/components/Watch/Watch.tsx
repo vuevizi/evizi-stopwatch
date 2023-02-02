@@ -130,49 +130,69 @@ const Watch: React.FC = () => {
   }, [time.milliseconds]);
 
   return (
-      <S.WatchContainer data-test="watch-container">
-        <S.Watch data-test="watch">
-          <div className="watch__minutes-container">
-            <h1 data-test='minutes' id="minutes">{formatTime(time.minutes)}</h1>
-          </div>
-          :
-          <div className="watch__seconds-container">
-            <h1 data-test='seconds' id="seconds">{formatTime(time.seconds)}</h1>
-          </div>
-          :
-          <div className="watch__milliseconds-container">
-            <h1 data-test='milliseconds' id="milliseconds">{formatTimeMilliseconds(time.milliseconds)}</h1>
-          </div>
-        </S.Watch>
-        <S.WatchActionContainer data-test="watch-actions">
-          {time.areRunning ? (
-              <S.WatchButtonStop
-                  id='button-stop'
-                  areRunning={time.areRunning}
-                  onClick={() => stopWatch()}
-              >
-                Stop
-              </S.WatchButtonStop>
-          ) : (
-              <S.WatchButtonStart
-                  id='button-start'
-                  areRunning={time.areRunning}
-                  onClick={() => startWatch()}
-              >
-                Start
-              </S.WatchButtonStart>
-          )}
-          {time.areRunning ? (
-              <S.WatchButtonMark className="" onClick={() => handleAddRecord()}>
-                Mark
-              </S.WatchButtonMark>
-          ) : (
-              <S.WatchButtonReset  onClick={() => handleResetWatch()}>
-                Reset
-              </S.WatchButtonReset>
-          )}
-        </S.WatchActionContainer>
-      </S.WatchContainer>
+    <S.WatchContainer data-test="watch-container">
+      <S.Watch data-test="watch">
+        <div className="watch__minutes-container">
+          <h1
+            data-test="minutes"
+            id="minutes"
+          >
+            {formatTime(time.minutes)}
+          </h1>
+        </div>
+        :
+        <div className="watch__seconds-container">
+          <h1
+            data-test="seconds"
+            id="seconds"
+          >
+            {formatTime(time.seconds)}
+          </h1>
+        </div>
+        :
+        <div className="watch__milliseconds-container">
+          <h1
+            data-test="milliseconds"
+            id="milliseconds"
+          >
+            {formatTimeMilliseconds(time.milliseconds)}
+          </h1>
+        </div>
+      </S.Watch>
+      <S.WatchActionContainer data-test="watch-actions">
+        {time.areRunning ? (
+          <S.WatchButtonStop
+            id="button-stop"
+            data-test="button-stop"
+            onClick={stopWatch}
+          >
+            Stop
+          </S.WatchButtonStop>
+        ) : (
+          <S.WatchButtonStart
+            data-test="button-start"
+            onClick={startWatch}
+          >
+            Start
+          </S.WatchButtonStart>
+        )}
+        {time.areRunning ? (
+          <S.WatchButtonMark
+            data-test="button-mark"
+            onClick={handleAddRecord}
+          >
+            Mark
+          </S.WatchButtonMark>
+        ) : (
+          <S.WatchButtonReset
+            data-test="button-reset"
+            onClick={handleResetWatch}
+          >
+            Reset
+          </S.WatchButtonReset>
+        )}
+      </S.WatchActionContainer>
+    </S.WatchContainer>
   );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MainLayout} from "./layouts";
+import {MainLayout} from './layouts';
 function App() {
   return (
     <div className="App">
-        <MainLayout/>
+      <MainLayout />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import App from '../App';
 import {shallow} from 'enzyme';
 import {MainLayout} from '../layouts';
 import React from 'react';
-import toJson from "enzyme-to-json";
+import toJson from 'enzyme-to-json';
 
 describe('App Component', () => {
   const wrapper = shallow(<App />);
@@ -21,7 +21,7 @@ describe('App Component', () => {
   test('renders the Mainlayout', () => {
     expect(wrapper.contains(<MainLayout />)).toEqual(true);
   });
-  it("renders correctly", () => {
+  it('renders correctly', () => {
     const tree = shallow(<App />);
     expect(toJson(tree)).toMatchSnapshot();
   });

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const MainContent = styled.section`
   width: 100%;
@@ -7,5 +7,5 @@ export const MainContent = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-`
+`;
 console.log(MainContent.displayName);

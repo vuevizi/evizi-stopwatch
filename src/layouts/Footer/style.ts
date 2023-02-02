@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   background: var(--primary-color);
@@ -7,8 +7,8 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const FooterText = styled.h2`
   color: var(--text-color);
-`
+`;

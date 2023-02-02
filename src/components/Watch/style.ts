@@ -1,11 +1,11 @@
-import styled, {css} from "styled-components";
-import {ButtonWatchProps} from "../../interfaces/interfaces";
+import styled, {css} from 'styled-components';
+import {ButtonWatchProps} from '../../interfaces/interfaces';
 
 export const WatchContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`
+`;
 export const Watch = styled.div`
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@ export const Watch = styled.div`
       font-weight: bold;
     }
   }
-`
+`;
 export const WatchActionContainer = styled.div`
   width: 100%;
   height: 20%;
@@ -35,8 +35,7 @@ export const WatchActionContainer = styled.div`
   padding: 10px;
   justify-content: center;
   align-items: center;
-  
-`
+`;
 export const WatchButtonStart = styled.button<ButtonWatchProps>`
   font-size: 24px;
   color: white;
@@ -45,16 +44,16 @@ export const WatchButtonStart = styled.button<ButtonWatchProps>`
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  
+
   &:hover {
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
   &:active {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
   }
-`
+`;
 export const WatchButtonStop = styled.button<ButtonWatchProps>`
   font-size: 24px;
   color: white;
@@ -63,16 +62,16 @@ export const WatchButtonStop = styled.button<ButtonWatchProps>`
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  
+
   &:hover {
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
   &:active {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
   }
-`
+`;
 export const WatchButtonReset = styled.button<ButtonWatchProps>`
   font-size: 24px;
   color: white;
@@ -81,16 +80,16 @@ export const WatchButtonReset = styled.button<ButtonWatchProps>`
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  
+
   &:hover {
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
   &:active {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
   }
-`
+`;
 export const WatchButtonMark = styled.button<ButtonWatchProps>`
   font-size: 24px;
   color: var(--text-color);
@@ -99,15 +98,13 @@ export const WatchButtonMark = styled.button<ButtonWatchProps>`
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  
-  
+
   &:hover {
-    transform: translate(-2px,-2px);
+    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
   &:active {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
   }
-  
-`
+`;
