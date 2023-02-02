@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import {ButtonWatchProps} from '../../interfaces/interfaces';
 
 export const WatchContainer = styled.div`
@@ -13,13 +13,16 @@ export const Watch = styled.div`
   gap: 10px;
   color: var(--text-color);
   font-size: 40px;
+
   & .watch__milliseconds-container {
     padding-inline: 2px;
+
     & #milliseconds {
       font-size: 60px;
       font-weight: bold;
     }
   }
+
   & .watch__seconds-container {
     & #seconds {
       font-size: 60px;
@@ -49,6 +52,7 @@ export const WatchButtonStart = styled.button<ButtonWatchProps>`
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
+
   &:active {
     transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
@@ -67,6 +71,7 @@ export const WatchButtonStop = styled.button<ButtonWatchProps>`
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
+
   &:active {
     transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
@@ -85,6 +90,7 @@ export const WatchButtonReset = styled.button<ButtonWatchProps>`
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
+
   &:active {
     transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;
@@ -103,6 +109,7 @@ export const WatchButtonMark = styled.button<ButtonWatchProps>`
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 12px 0px var(--text-color);
   }
+
   &:active {
     transform: translate(0, 0);
     box-shadow: 0px 0px 0px 0px;

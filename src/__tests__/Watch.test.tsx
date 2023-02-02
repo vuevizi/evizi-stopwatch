@@ -59,4 +59,8 @@ describe('Watch Test', () => {
     const buttonMark = findTestElement(watchActions, 'button-mark');
     expect(buttonMark.length).toBe(0);
   });
+  test('renders right button Reset at the first render', () => {
+    const buttonReset = findTestElement(watchActions, 'button-reset');
+    expect(buttonReset.length).toBe(1);
+  });
 });

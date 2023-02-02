@@ -1,5 +1,4 @@
 import {Header} from '../layouts';
-import toJson from 'enzyme-to-json';
 import {shallow} from 'enzyme';
 import {findTestElement} from '../utils/test.utils';
 
