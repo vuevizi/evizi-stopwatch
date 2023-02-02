@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Layout renders match to snapshots 1`] = `
+<Fragment>
+  <Header
+    data-test="header"
+  />
+  <styled.section
+    data-test="main-content"
+  >
+    <Watch
+      data-test="watch"
+    />
+    <TableTimer
+      data-test="table-timer"
+    />
+  </styled.section>
+  <Footer
+    data-test="footer"
+  />
+</Fragment>
+`;
+
+exports[`Main Layout renders without crash 1`] = `
+<Fragment>
+  <Header />
+  <styled.section>
+    <Watch />
+    <TableTimer />
+  </styled.section>
+  <Footer />
+</Fragment>
+`;

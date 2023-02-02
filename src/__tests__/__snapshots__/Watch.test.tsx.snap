@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Watch renders matching with snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Watch>
+    <styled.div
+      data-test="watch-container"
+    >
+      <div
+        className="sc-bcXHqe kRtKIC"
+        data-test="watch-container"
+      >
+        <styled.div
+          data-test="watch"
+        >
+          <div
+            className="sc-gswNZR ldfMAM"
+            data-test="watch"
+          >
+            <div
+              className="watch__minutes-container"
+            >
+              <h1
+                data-test="minutes"
+                id="minutes"
+              >
+                00
+              </h1>
+            </div>
+            :
+            <div
+              className="watch__seconds-container"
+            >
+              <h1
+                data-test="seconds"
+                id="seconds"
+              >
+                00
+              </h1>
+            </div>
+            :
+            <div
+              className="watch__milliseconds-container"
+            >
+              <h1
+                data-test="milliseconds"
+                id="milliseconds"
+              >
+                00
+              </h1>
+            </div>
+          </div>
+        </styled.div>
+        <styled.div
+          data-test="watch-actions"
+        >
+          <div
+            className="sc-dkrFOg iKsrVZ"
+            data-test="watch-actions"
+          >
+            <styled.button
+              areRunning={false}
+              data-test="button-start"
+              onClick={[Function]}
+            >
+              <button
+                className="sc-hLBbgP ivwyGG"
+                data-test="button-start"
+                onClick={[Function]}
+              >
+                Start
+              </button>
+            </styled.button>
+            <styled.button
+              data-set="button-reset"
+              onClick={[Function]}
+            >
+              <button
+                className="sc-jSUZER gLsqKa"
+                data-set="button-reset"
+                onClick={[Function]}
+              >
+                Reset
+              </button>
+            </styled.button>
+          </div>
+        </styled.div>
+      </div>
+    </styled.div>
+  </Watch>
+</Provider>
+`;

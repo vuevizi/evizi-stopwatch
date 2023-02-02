@@ -8,4 +8,4 @@ export const MainContent = styled.section`
   align-items: center;
   justify-content: flex-start;
 `
-
+console.log(MainContent.displayName);
